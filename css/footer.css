@@ -55,7 +55,7 @@ article{
 
 	display: flex;
 	align-items: center;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 }
 .tYC{
@@ -66,12 +66,20 @@ span{
 	line-height: 2em;
 	text-align: center;
 }
-img {
+img,ion-icon {
 	width: calc(3em + 1vw);
 }
 li{
 	list-style: none;
 	font-style: italic;
+}
+a{
+	text-align: center;
+	display: block;
+	margin: 1em;
+}
+.article-icono{
+	position: relative;
 }
 /** FIN-PRIMER-FOOTER **/
 
@@ -83,3 +91,9 @@ li{
 /** FIN-SEGUNDO-FOOTER **/
 
 /* FIN-FOOTER */
+
+@media (min-width:1000px){
+	.redes-sociales{
+		flex-direction: row;
+	}
+}
