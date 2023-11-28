@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		*{
+			border: 1px solid red;
+		}
+		main{
+			width: 90vw;
+			height: 50vh;
+
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+		section{
+			border-radius: 50px;
+			margin-left: .5em;
+			margin-right: .5em;
+
+			width: calc(100% / 5);
+			height: 100%;
+
+			transition-property: width;
+			transition-duration: 3s;
+			transition-timing-function: linear;
+		}
+		section:hover{
+			transition-property: width;
+			transition-duration: 2s;
+			transition-timing-function: linear;
+			width: 300%;
+		}
+		.img-1{
+			background-color: yellow;
+		}
+		.img-2{
+			background-color: blue;
+		}
+		.img-3{
+			background-color: red;
+		}
+		.img-4{
+			background-color: green;
+		}
+		.img-5{
+			background-color: orange;
+		}
+
+		/*span:before{
+			color: darkred;
+			content: "Bone";
+		}*/
+	</style>
+
+
+	<title>Ayudita pa los compas</title>
+</head>
+<body onload="mostrarBienvenida()">
+	<main>
+		<section class="img-1"></section>
+		<section class="img-2"></section>
+		<section class="img-3"></section>
+		<section class="img-4"></section>
+		<section class="img-5"></section>
+	</main>
+
+	<h1>Bienvenido, <span id="saludoPersona"></span></h1>
+	<script type="text/javascript">
+		let tipoPersona;
+		let i = 1;
+		let saludoPersona;
+		function mostrarBienvenida(){
+			setInterval(cambiarSaludo,2000);
+		}
+
+		function cambiarSaludo() {
+			if (i==1) {
+				tipoPersona = "amigo";
+				i++
+			} else {
+				if (i==2) {
+					tipoPersona = "colega";
+					i++
+				} else {
+					if (i==3) {
+						tipoPersona = "camarada";
+						i++
+					} else {
+						tipoPersona = "parsero";
+						i = 1;
+					}
+				}
+			}
+			saludoPersona = document.getElementById('saludoPersona');
+			saludoPersona.textContent = tipoPersona;
+			saludoPersona.style.color = "darkred";
+		}
+	</script>
+</body>
+</html>
