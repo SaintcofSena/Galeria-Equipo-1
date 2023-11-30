@@ -2,9 +2,9 @@
 :root{
     --color-footer-buttom-background: #8BC7D0;
     --color-footer-buttom-letter: #2C2C2C;
-    --color-footer-1-background: #F9F0EB;
-    --color-footer-2-background: #8BC7D0;
-    --color-footer-letter: #000;
+    --color-footer-1-background: #040714;
+    --color-footer-2-background: linear-gradient(185deg, rgba(7,0,129,1) 0%, rgba(9,9,121,1) 25%, rgba(0,181,218,1) 91%);;
+    --color-footer-letter: aliceblue; 
 }
 /* FIN-ROOT */
 
@@ -44,7 +44,9 @@ footer,a{
 /*** AUTOR ***/
 address{
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 }
 /*** FIN-AUTOR ***/
 article{
@@ -62,12 +64,20 @@ article{
 	flex-direction: column;	
 }
 span{
+	display: block;
 	font-weight: bold;
 	line-height: 2em;
 	text-align: center;
 }
 img,ion-icon {
 	width: calc(3em + 1vw);
+}
+br{
+display:block;
+}
+ol{
+	display:flex;
+	flex-direction: row;
 }
 li{
 	list-style: none;
@@ -86,7 +96,7 @@ a{
 /** SEGUNDO-FOOTER **/
 .segundo-footer{
 	height: 2em;
-	background-color: var(--color-footer-2-background);
+	background: var(--color-footer-2-background);
 }
 /** FIN-SEGUNDO-FOOTER **/
 
